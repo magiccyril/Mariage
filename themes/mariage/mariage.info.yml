@@ -5,6 +5,7 @@ description: Cyril & Helena wedding theme.
 core: 8.x
 libraries:
   - mariage/global-styling
+  - mariage/global-scripting
 libraries-override:
   classy/base: false
 regions:

@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 @import 'settings';
-//@import 'foundation';
+@import 'foundation';
 //@import 'motion-ui';
 
 $foundation-palette: (
@@ -201,6 +201,17 @@ body {
     }
 }
 
+.row .messages-wrapper {
+    @include breakpoint(medium) {
+        @include grid-column(10);
+        @include grid-column-offset(1);
+    }
+    
+    @include breakpoint(large) {
+        @include grid-column(8);
+        @include grid-column-offset(2);
+    }
+}
 .page-content {
     padding: 3rem;
     
@@ -209,6 +220,11 @@ body {
         font-size: 4em;
         text-align: center;
     }
+}
+h1.page-title {
+    font-family: mathletebulky;
+    font-size: 4em;
+    text-align: center;
 }
 
 .page-content-form {
