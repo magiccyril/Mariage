@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Theme override to display a field.
+ *
+ * @see template_preprocess_field()
+ */
+#}
+
+{% if not label_hidden %}
+  <h4{{ title_attributes.addClass(title_classes) }}>{{ label }}</h4>
+{% endif %}
+{% for item in items %}
+  {{ item.content }}
+{% endfor %}
+    

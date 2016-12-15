@@ -1,0 +1,14 @@
+name: Mariage
+type: theme
+base theme: classy
+description: Cyril & Helena wedding theme.
+core: 8.x
+libraries:
+  - mariage/global-styling
+libraries-override:
+  classy/base: false
+regions:
+  header: Header
+  content: Content
+  footer: Footer
+  

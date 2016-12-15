@@ -1,0 +1,291 @@
+@charset 'utf-8';
+
+@import 'settings';
+//@import 'foundation';
+//@import 'motion-ui';
+
+$foundation-palette: (
+  primary: #2199e8,
+  secondary: #777,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #ec5840,
+);
+
+@include foundation-global-styles;
+@include foundation-grid;
+// @include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+//@include foundation-accordion;
+//@include foundation-accordion-menu;
+//@include foundation-badge;
+//@include foundation-breadcrumbs;
+@include foundation-button-group;
+//@include foundation-callout;
+//@include foundation-close-button;
+@include foundation-menu;
+//@include foundation-menu-icon;
+//@include foundation-drilldown-menu;
+//@include foundation-dropdown;
+//@include foundation-dropdown-menu;
+//@include foundation-flex-video;
+//@include foundation-label;
+//@include foundation-media-object;
+@include foundation-off-canvas;
+//@include foundation-orbit;
+//@include foundation-pagination;
+//@include foundation-progress-bar;
+// @include foundation-progress-element;
+// @include foundation-meter-element;
+//@include foundation-slider;
+//@include foundation-sticky;
+//@include foundation-reveal;
+//@include foundation-switch;
+@include foundation-table;
+//@include foundation-tabs;
+//@include foundation-thumbnail;
+//@include foundation-title-bar;
+//@include foundation-tooltip;
+//@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+// @include foundation-flex-classes;
+
+//@include motion-ui-transitions;
+//@include motion-ui-animations;
+
+@font-face {
+    font-family: 'mathletebulky';
+    src: url('../font/mathlete_bulky_macroman/Mathlete-Bulky-webfont.eot');
+    src: url('../font/mathlete_bulky_macroman/Mathlete-Bulky-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/mathlete_bulky_macroman/Mathlete-Bulky-webfont.woff') format('woff'),
+         url('../font/mathlete_bulky_macroman/Mathlete-Bulky-webfont.ttf') format('truetype'),
+         url('../font/mathlete_bulky_macroman/Mathlete-Bulky-webfont.svg#mathletebulky') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'selima';
+    src: url('../font/selima/selima_-webfont.woff2') format('woff2'),
+         url('../font/selima/selima_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    
+}
+
+.wrapper {
+    @include breakpoint(medium) {
+        @include grid-column(10);
+        @include grid-column-offset(1);
+        border-radius: 10px;
+    }
+    
+    @include breakpoint(large) {
+        @include grid-column(8);
+        @include grid-column-offset(2);
+    }
+
+    background: #FFF;
+    border: 1px solid #EEE;
+    margin-top: 1rem;
+}
+
+#mega-header {
+    background: url(../img/header.jpg) no-repeat center bottom fixed;
+    background-size: cover;
+    height: 90%;
+    position: relative;
+    
+    a {
+        color: #FFF;
+    }
+    h2 {
+        font-family: mathletebulky;
+        font-size: 4em;
+        text-align: center;
+        position: absolute;
+        top: 10vh;
+        width: 100%;
+        z-index: 100;
+        
+        @include breakpoint(large) {
+            font-size: 7em;
+        }
+    }
+    
+    h3 {
+        font-family: mathletebulky;
+        font-size: 3em;
+        line-height: 0.7;
+        text-align: center;
+        position: absolute;
+        top: 43vh;
+        width: 100%;
+        z-index: 100;
+        
+        @include breakpoint(large) {
+            font-size: 4em;
+        }
+    }
+
+    h1 {
+        font-family: selima;
+        font-size: 4em;
+        text-align: center;
+        position: absolute;
+        top: 24vh;
+        width: 100%;
+        z-index: 100;
+        
+        @include breakpoint(large) {
+            font-size: 7em;
+        }
+    }
+    
+    #header-color-filter {
+        background: #370ca5;
+        opacity: 0.24;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+    }
+    #header-color-filter.wedding-pink {
+        background: #f48287;
+        opacity: 0.75;
+    }
+}
+
+#header-next-separator {
+    text-align: center;
+    
+    a {
+        background: #FFF;
+        border-radius: 50%;
+        box-shadow: 0 0 7px 0 rgba(0,0,0,.13);
+        display: inline-block;
+        height: 52px;
+        position: relative;
+        top: -30px;
+        width: 52px;
+        z-index: 200;
+        
+        -webkit-transition: fill .3s ease-in-out,transform .3s ease-in-out,color .3s ease-in-out;
+        -o-transition: fill .3s ease-in-out,transform .3s ease-in-out,color .3s ease-in-out;
+        transition: fill .3s ease-in-out,transform .3s ease-in-out,color .3s ease-in-out;
+        
+        svg {
+            display: block;
+            fill: #f48287;
+            height: 50%;
+            position: relative;
+            top: 16%;
+            width: 100%;
+        }
+        
+        &:hover, &:focus {
+            transform: scale(1.1);
+            
+            svg {
+                fill: darken(#f48287, 33%);
+            }
+        }
+    }
+}
+
+.page-content {
+    padding: 3rem;
+    
+    h2 {
+        font-family: mathletebulky;
+        font-size: 4em;
+        text-align: center;
+    }
+}
+
+.page-content-form {
+    background: url(https://api.mapbox.com/styles/v1/magiccyril/ciwckc72c00aq2qpm9ey59ilk/static/-73.969634,40.759067,11.89,0.00,0.00/1280x1280?access_token=pk.eyJ1IjoibWFnaWNjeXJpbCIsImEiOiJVLTkzcVlrIn0.wHS9G1_Te1aqkGlWXLdGjw) no-repeat center center fixed;
+    background-size: cover;
+    margin-top: 4rem;
+    position: relative;
+}
+.page-content-form-overlay {
+    background: rgba(244, 130, 135, 1);
+    height: 100%;
+    opacity: 0.75;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+.form-wrapper {
+    @include breakpoint(medium) {
+        @include grid-column(10);
+        @include grid-column-offset(1);
+        border-radius: 10px;
+    }
+    
+    @include breakpoint(large) {
+        @include grid-column(8);
+        @include grid-column-offset(2);
+    }
+    
+    margin-bottom: 5rem;
+    padding-top: 3rem;
+    position: relative;
+    z-index: 100;
+
+    h2 {
+        font-family: mathletebulky;
+        font-size: 4em;
+        text-align: center;
+        padding: 0 1rem;
+    }
+    
+    p {
+        padding: 3rem 3rem 0;
+    }
+
+    form {
+        padding: 3rem;
+    }
+    form.row {
+        margin-right: 0;
+    }
+    
+    input, textarea, select {
+        border-radius: 5px;
+    }
+    
+    .button:hover {
+        box-shadow: 0 0 7px 0 rgba(0,0,0,.5);
+    }
+}
+
+.form-item-savethedate-adult,
+.form-item-savethedate-child {
+    @include breakpoint(medium) {
+        @include grid-column(6);
+    }
+}
+.form-item-savethedate-name,
+.form-item-savethedate-address,
+.form-item-savethedate-phone,
+.form-item-email,
+.form-item-savethedate-message,
+.form-item-savethedate-sleep {
+    @include breakpoint(medium) {
+        @include grid-column(12);
+    }
+    
+    textarea {
+        margin-bottom: 1rem;
+    }
+}
