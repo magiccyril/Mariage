@@ -11,8 +11,7 @@
 function mariage_preprocess_page(&$variables) {
   $helena = 'http://helena-cyril.fr';
   $cyril = 'http://cyril-helena.fr';
-  
-  $helena = 'http://mariage-magiccyril.c9users.io';
+
   global $base_root;
   $variables['theme_color'] = $base_root == $helena ? 'pink' : 'blue';
 }
