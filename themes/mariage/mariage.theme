@@ -9,8 +9,8 @@
  * Implements hook_preprocess_HOOK() for page.html.twig.
  */
 function mariage_preprocess_page(&$variables) {
-  $helena = 'http://helena-cyril.fr';
-  $cyril = 'http://cyril-helena.fr';
+  $helena = 'http://www.helena-cyril.fr';
+  $cyril = 'http://www.cyril-helena.fr';
 
   global $base_root;
   $variables['theme_color'] = $base_root == $helena ? 'pink' : 'blue';
